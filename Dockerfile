@@ -1,5 +1,5 @@
 FROM alpine:latest
-#ARG SSHPORT=35860
+ARG SSHPORT=22
 #ENV PORT=$SSHPORT
 
 # ssh-keygen -A generates all necessary host keys (rsa, dsa, ecdsa, ed25519) at default location.
