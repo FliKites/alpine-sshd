@@ -15,7 +15,7 @@ ENV PORT=$SSHPORT
 
 COPY docker-entrypoint.sh /
 
-#EXPOSE ${PORT}
+EXPOSE ${PORT}
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
