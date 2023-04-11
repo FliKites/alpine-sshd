@@ -16,7 +16,6 @@ RUN    apk update \
 COPY docker-entrypoint.sh /
 
 EXPOSE ${PORT}
-
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # -D in CMD below prevents sshd from becoming a daemon. -e is to log everything to stderr.
