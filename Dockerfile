@@ -1,6 +1,9 @@
 FROM alpine:latest
-ARG SSHPORT=22
-ENV PORT=$SSHPORT
+ARG PORT
+ENV PORT=${PORT}
+
+ARG AUTHORIZED_KEYS
+ENV AUTHORIZED_KEYS=${AUTHORIZED_KEYS}
 
 # ssh-keygen -A generates all necessary host keys (rsa, dsa, ecdsa, ed25519) at default location.
 #RUN    apk update \
