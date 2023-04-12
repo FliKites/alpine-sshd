@@ -13,11 +13,11 @@ ENV PORT=$SSHPORT
 
 # This image expects AUTHORIZED_KEYS environment variable to contain your ssh public key.
 
-COPY docker-entrypoint.sh /app/docker-entrypoint.sh
+COPY docker-entrypoint.sh docker-entrypoint.sh
 
-EXPOSE ${PORT}
-WORKDIR /app
-ENTRYPOINT ["/app/docker-entrypoint.sh"]
+#EXPOSE ${PORT}
+WORKDIR /
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # -D in CMD below prevents sshd from becoming a daemon. -e is to log everything to stderr.
 CMD ["/usr/sbin/sshd", "-D", "-e"]
