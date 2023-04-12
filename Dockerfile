@@ -13,7 +13,7 @@ RUN    apk update \
 
 # This image expects AUTHORIZED_KEYS environment variable to contain your ssh public key.
 
-COPY docker-entrypoint.sh /
+COPY docker-entrypoint.sh /root
 
 EXPOSE ${PORT}
 ENTRYPOINT ["/docker-entrypoint.sh"]
